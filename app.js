@@ -29,9 +29,7 @@ nunjucks.configure('views', { noCache: true });
 //     res.render('index.html', { title: 'Example', people: [{ name: "Gandalf" }, { name: "Frodo" }, { name: "Hermione" }] })
 // });
 
-app.use(function(err, req, res, next){
-  //console.log(err)
-  res.send(err.message)
+app.use(function(err, req, res, next) {
+    //console.log(err)
+    res.send(err.message)
 })
-
-
