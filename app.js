@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express(); // creates an instance of an express application
+const routes = require('./routes');
+app.use('/', routes);
+
 
 app.listen(3000, function() {
     console.log("Listening on port 3000...");
@@ -19,6 +22,7 @@ app.set('view engine', 'html');
 app.engine('html', nunjucks.render);
 nunjucks.configure('views', { noCache: true });
 
-app.use("/", function(req, res) {
-    res.render('index.html', { title: 'Example', people: [{ name: "Gandalf" }, { name: "Frodo" }, { name: "Hermione" }] })
-});
+// app.use("/", function(req, res) {
+//     res.render('index.html', { title: 'Example', people: [{ name: "Gandalf" }, { name: "Frodo" }, { name: "Hermione" }] })
+// });
+
