@@ -41,6 +41,11 @@ code {
   font-size: 80%;
 }
 
+li {
+  list-style-type: none;
+  color: #7B68EE;
+}
+
 .tweetbox {
   padding: 7px;
 }
