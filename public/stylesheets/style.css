@@ -59,6 +59,11 @@ li {
 .content {
   margin-left: 60px;
 }
-.content .by {
+.by {
   font-weight: bold;
+
+}
+
+.userimg{
+  display: block;
 }
