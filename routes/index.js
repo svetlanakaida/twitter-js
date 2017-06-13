@@ -18,11 +18,12 @@ router.get('/', function (req, res) {
 
 router.get('/users/:name', function(err, req, res, next) {
   if (err) throw err;
-  var name = req.params.name;
+  var name = req.params.name.split("%20").join(" "); //check out issue with space in URL %20
+  console.log(name)
   var list = tweetBank.find( {name: name} ); //finds elems of tweetBank data w/ name: name
 
   res.render( 'index', list.content);
-  //console.log(list.list.content);
+  console.log(list.content);
 });
 
 module.exports = router;
